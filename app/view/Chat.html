@@ -1,0 +1,38 @@
+<div class="grids_of_3">
+    <div class="space_grid">
+    </div>
+    <div class="custome_grid left" ng-controller="ChatController">
+        <div class="btn_style bg">
+            <h4>Mint chat - <span ng-bind="user_email"></span></h4>
+        </div>
+        <div class="login_form">
+
+            <div ng-repeat="msg in messages">
+                <div class="dialog">
+                    <div class="content">
+                        <div class="title">{{msg.email}}</div>
+                        <br>
+                        {{msg.text}}
+                    </div>
+                </div>
+                <br><br>
+            </div>
+
+            <form ng-submit="sendMessage()">
+                <br>
+                <input style="width: 95%" ng-model="message.text" ng-enter="sendMessage()" type="text" class="textbox"
+                       value="Message here"
+                       onfocus="this.value = '';"
+                       onblur="if (this.value == '') {this.value = 'Message here';}">
+                <br><br>
+                <ul class="login_b">
+                    <li><i class="border"></i><a href="#/logout" style="color: #fff0eb">Log out</a><i
+                            class="border"></i></li>
+                </ul>
+            </form>
+
+        </div>
+    </div>
+    <div class="grid1_of_3 left">
+    </div>
+</div>

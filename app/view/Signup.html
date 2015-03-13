@@ -1,0 +1,25 @@
+<div class="grids_of_3">
+    <div class="grid1_of_3">
+    </div>
+    <div class="grid1_of_3 left" ng-controller="SignupController">
+        <div class="btn_style bg">
+            <h4>Mint chat</h4>
+        </div>
+        <div class="login_form">
+            <form>
+                <span>email</span>
+                <input type="text" class="textbox" value="Enter your email" onfocus="this.value = '';"
+                       ng-model="registerUser.email" onblur="if (this.value == '') {this.value = 'Enter your email';}">
+                <span class="top">password</span>
+                <input ng-model="registerUser.password" type="password" value=""/>
+                <span class="top">confirm password</span>
+                <input ng-model="registerUser.confirmPassword" type="password" value=""/>
+            </form>
+            <div class="buttons">
+                <button class="bg2" ng-click="register()">Sign up</button>
+            </div>
+        </div>
+    </div>
+    <div class="grid1_of_3 left">
+    </div>
+</div>
